@@ -1,0 +1,559 @@
+
+/* Carousel Start */
+.carousel-inner.onebyone-carosel { margin: auto; width: 90%; }
+.onebyone-carosel .active.left { left: -33.33%; }
+.onebyone-carosel .active.right { left: 33.33%; }
+.onebyone-carosel .next { left: 33.33%; }
+.onebyone-carosel .prev { left: -33.33%; }
+/* Carousel end */
+
+/*Search Box Start*/
+.searching {
+    outline: none;
+}
+input[type=search] {
+    -webkit-appearance: textfield;
+    -webkit-box-sizing: content-box;
+    font-family: inherit;
+    font-size: 100%;
+}
+.searching::-webkit-search-decoration,
+.searching::-webkit-search-cancel-button {
+    display: none; 
+}
+
+
+.searching {
+    background: #ededed url(https://static.tumblr.com/ftv85bp/MIXmud4tx/search-icon.png) no-repeat 9px center;
+    border: solid 1px #ccc;
+    padding: 9px 10px 9px 32px;
+    width: 80px;
+    
+    -webkit-border-radius: 10em;
+    -moz-border-radius: 10em;
+    border-radius: 10em;
+    
+    -webkit-transition: all .5s;
+    -moz-transition: all .5s;
+    transition: all .5s;
+}
+.searching:focus {
+    width: 250px;
+    background-color: #fff;
+    border-color: #CDB64B;
+    
+    -webkit-box-shadow: 0 0 5px rgba(109,207,246,.5);
+    -moz-box-shadow: 0 0 5px rgba(109,207,246,.5);
+    box-shadow: 0 0 5px rgba(109,207,246,.5);
+}
+
+
+.searching:-moz-placeholder {
+    color: #999;
+}
+.searching::-webkit-input-placeholder {
+    color: #999;
+}
+
+.searchbox{
+	margin-top: 5px;
+	margin-right: 50px;
+}
+/*Search Box End*/
+
+/*Glowing Button Start*/
+.button1 {
+  background-color: transparent;
+  -webkit-border-radius: 10px;
+  border-radius: 5px;
+  border: none;
+  color: #FFFFFF;
+  cursor: pointer;
+  display: inline-block;
+  font-family: Arial;
+  font-size: 20px;
+  padding: 5px 10px;
+  text-align: center;
+  text-decoration: none;
+}
+@-webkit-keyframes glowing {
+  0% { background-color: #CDB64B; -webkit-box-shadow: 0 0 3px #CDB64B; }
+  50% { background-color: #edd255; -webkit-box-shadow: 0 0 40px #edd255; }
+  100% { background-color: #a8953c; -webkit-box-shadow: 0 0 3px #a8953c; }
+}
+
+.button1 {
+  -webkit-animation: glowing 1500ms infinite;
+  -moz-animation: glowing 1500ms infinite;
+  -o-animation: glowing 1500ms infinite;
+  animation: glowing 1500ms infinite;
+}
+
+
+/*Glowing Button End*/
+
+.social a:hover {
+    color: #CDB64C;
+}
+
+.social a {
+    font-size: 32px;
+    margin: 0 10px;
+    color: #c7c7c7;
+}
+
+.social{
+  margin-top:50px;
+}
+
+.footer-single a:hover {
+  color: #CDB64C;
+}
+
+
+/*login start*/
+
+
+
+    .login-block {
+    width: 320px;
+    padding: 20px;
+    background: #121E3B;
+    border-radius: 5px;
+    border-top: 5px solid #CDB64B;
+    margin: 0 auto;
+}
+
+.login-block h1 {
+    text-align: center;
+    color: #000;
+    font-size: 18px;
+    text-transform: uppercase;
+    margin-top: 0;
+    margin-bottom: 20px;
+}
+
+.login-block input {
+    width: 100%;
+    height: 42px;
+    box-sizing: border-box;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    margin-bottom: 20px;
+    font-size: 14px;
+    padding: 0 20px 0 50px;
+    outline: none;
+}
+
+.login-block input #username {
+    background: #fff url('http://i.imgur.com/u0XmBmv.png') 20px top no-repeat;
+    background-size: 16px 80px;
+}
+
+.login-block input #username:focus {
+    background: #fff url('http://i.imgur.com/u0XmBmv.png') 20px bottom no-repeat;
+    background-size: 16px 80px;
+}
+
+.login-block input #password {
+    background: #fff url('http://i.imgur.com/Qf83FTt.png') 20px top no-repeat;
+    background-size: 16px 80px;
+}
+
+.login-block input #password:focus {
+    background: #fff url('http://i.imgur.com/Qf83FTt.png') 20px bottom no-repeat;
+    background-size: 16px 80px;
+}
+
+.login-block input:active, .login-block input:focus {
+    border: 1px solid #CDB64B;
+}
+
+.login-block button {
+    width: 100%;
+    height: 40px;
+    background: #CDB64B;
+    box-sizing: border-box;
+    border-radius: 5px;
+    border: 1px solid #CDB64B;
+    color: #fff;
+    font-weight: bold;
+    text-transform: uppercase;
+    font-size: 14px;
+    outline: none;
+    cursor: pointer;
+}
+
+.login-block button:hover {
+    background: #8e7e31;
+}
+
+/*login ends*/
+
+/*Restaurant Profile Start*/
+.container-profile{width:100%; position: absolute;}  
+.left-profile{float:left; width:66%; height:500px;}
+.right-profile{float:left; width:33%; height:300px;}
+  
+/*Restaurant Profile End*/
+
+/*User Profile*/
+/* style for profile.php */
+.edit a{
+  list-style: none;
+  background-color: gray;
+  padding: 10px;
+  color: #fff;
+  border-radius: 2px;
+}
+
+.edit a:hover{
+  background-color: #000;
+  text-decoration: none;
+}
+
+
+.refer a{
+  font-size: 1.4em;
+  color: #fff;
+  background-color: red;
+  border-radius: 5px;
+  padding: 8px 15px;
+  text-decoration: none;
+  position: relative;
+}
+.refer a:hover{
+  background-color: #C9302C;
+}
+
+.progress {
+    height: 20px;
+    margin-bottom: 20px;
+    overflow: hidden;
+    background-color: #f5f5f5;
+    border-radius: 4px;
+    -webkit-box-shadow: inset 0 1px 2px rgba(0, 0, 0, .1);
+    box-shadow: inset 0 1px 2px rgba(0, 0, 0, .1);
+    margin-top: 3%;
+}
+.progress-bar-success {
+    background-color: #ECC619;
+}
+
+/*User Profile*/
+
+/*Swiper Start*/
+.swiper-slide li {
+    list-style: none;
+    float: left;
+    display: inline-flex;
+    width: 100%;
+    margin-bottom: 10px;
+}#cd-placeholder-5{width: 100%; background-color: #fff; color: #fff; height: 250px; padding-left: ;}
+.content-md {
+    padding-top: 30px;
+    padding-bottom: 80px;
+}
+ .glyphicon-ok {
+  -webkit-font-smoothing: antialiased;
+  color:green;
+  display:inline-block;
+  font-family:'Glyphicons Halflings';
+  font-style:normal;
+  font-weight:400;
+  line-height:1;
+  position:relative;
+  top:1px;
+}
+/*Swiper End*/
+
+/*style for restaurant cat page.php*/
+.center {
+    text-align: center;
+}
+
+.pagination {
+    display: inline-block;
+}
+
+.pagination a {
+    color: black;
+    float: left;
+    padding: 8px 16px;
+    text-decoration: none;
+    transition: background-color .3s;
+    border: 1px solid #ddd;
+    margin: 0 4px;
+    background-color: #CDB64B;
+}
+
+.pagination a.active {
+    background-color: #121E3B ;
+    color: white;
+    border: 1px solid #121E3B ;
+}
+
+.pagination a:hover:not(.active) {background-color: #B8860B;}
+/*style for restaurant cat page.php ends*/
+
+/*style for user profile.php*/
+#transaction{margin: 5% 0;  text-align: center; }
+#transaction a{
+  color: #fff;
+  background-color:  #14213E;
+  border-radius: 5px;
+  padding: 10px;
+  font-size: 1.5em;
+  text-decoration: none;
+}
+
+.refer a{
+  font-size: 1.4em;
+  color: #fff;
+  background-color: red;
+  border-radius: 5px;
+  padding: 8px 15px;
+  text-decoration: none;
+  position: relative;
+}
+.refer a:hover{
+  background-color: #C9302C;
+}
+
+/*style for modal table*/
+
+    /*--[if !IE]><!-->
+    Max width before this PARTICULAR table gets nasty
+    This query will take effect for any screen smaller than 760px
+    and also iPads specifically.
+    */
+table{width: 100%;}
+table tr th{
+    background-color: #b0c0ce;
+    padding: 2%;
+}
+table, th, td {
+    border: 1px solid black;
+    padding: 10px;
+}
+    @media 
+    only screen and (max-width: 760px),
+    (min-device-width: 768px) and (max-device-width: 1024px)  {
+    
+        /* Force table to not be like tables anymore */
+        #partner_table table, thead, tbody, th, td, tr { 
+            display: block; 
+        }
+        
+        /* Hide table headers (but not display: none;, for accessibility) */
+        #partner_table thead tr { 
+            position: absolute;
+            top: -9999px;
+            left: -9999px;
+        }
+        
+        #partner_table tr { border: 1px solid #ccc; }
+        
+        #partner_table td { 
+            /* Behave  like a "row" */
+            border: none;
+            border-bottom: 1px solid #eee; 
+            position: relative;
+            padding-left: 50%; 
+        }
+        
+        #partner_table td:before { 
+            /* Now like a table header */
+            position: absolute;
+            /* Top/left values mimic padding */
+            top: 6px;
+            left: 6px;
+            width: 45%; 
+            padding-right: 10px; 
+            white-space: nowrap;
+        }
+        
+        #user_table table, thead, tbody, th, td, tr { 
+            display: block; 
+        }
+        
+        /* Hide table headers (but not display: none;, for accessibility) */
+        #user_table thead tr { 
+            position: absolute;
+            top: -9999px;
+            left: -9999px;
+        }
+        
+        #user_table tr { border: 1px solid #ccc; }
+        
+        #user_table td { 
+            /* Behave  like a "row" */
+            border: none;
+            border-bottom: 1px solid #eee; 
+            position: relative;
+            padding-left: 50%; 
+        }
+        
+        #user_table td:before { 
+            /* Now like a table header */
+            position: absolute;
+            /* Top/left values mimic padding */
+            top: 6px;
+            left: 6px;
+            width: 45%; 
+            padding-right: 10px; 
+            white-space: nowrap;
+        }
+        /*style for partner modal table*/
+        #partner_modal table, thead, tfoot, tbody, th, td, tr { 
+            display: block; 
+        }
+        
+        /* Hide table headers (but not display: none;, for accessibility) */
+        #partner_modal thead tr { 
+            position: absolute;
+            top: -9999px;
+            left: -9999px;
+        }
+        
+        #partner_modal tr { border: 1px solid #ccc; }
+        
+        #partner_modal td { 
+            /* Behave  like a "row" */
+            border: none;
+            border-bottom: 1px solid #eee; 
+            position: relative;
+            padding-left: 50%; 
+        }
+        
+        #partner_modal td:before { 
+            /* Now like a table header */
+            position: absolute;
+            /* Top/left values mimic padding */
+            top: 6px;
+            left: 6px;
+            width: 45%; 
+            padding-right: 10px; 
+            white-space: nowrap;
+        }
+
+         /*style for profile modal table*/
+        #profile_modal table, thead, tbody, th, td, tr { 
+            display: block; 
+        }
+        
+        /* Hide table headers (but not display: none;, for accessibility) */
+        #profile_modal thead tr { 
+            position: absolute;
+            top: -9999px;
+            left: -9999px;
+        }
+        
+        #profile_modal tr { border: 1px solid #ccc; }
+        
+        #profile_modal td { 
+            /* Behave  like a "row" */
+            border: none;
+            border-bottom: 1px solid #eee; 
+            position: relative;
+            padding-left: 50%; 
+        }
+        
+        #profile_modal td:before { 
+            /* Now like a table header */
+            position: absolute;
+            /* Top/left values mimic padding */
+            top: 6px;
+            left: 6px;
+            width: 45%; 
+            padding-right: 10px; 
+            white-space: nowrap;
+        }
+        /*
+        Table header for partner table*/
+        #partner_table td:nth-of-type(1):before { content: "ID"; }
+        #partner_table td:nth-of-type(2):before { content: "Partner Name "; }
+        #partner_table td:nth-of-type(3):before { content: "Email"; }
+        #partner_table td:nth-of-type(4):before { content: "Mobile"; }
+        #partner_table td:nth-of-type(5):before { content: "Address"; }
+        #partner_table td:nth-of-type(6):before { content: "Transaction"; }
+        #partner_table td:nth-of-type(7):before { content: "Edit"; }
+        #partner_table td:nth-of-type(8):before { content: "Delete"; }
+
+        /* Table header for user table*/
+        #user_table td:nth-of-type(1):before { content: "ID"; }
+        #user_table td:nth-of-type(2):before { content: "Customer Name "; }
+        #user_table td:nth-of-type(3):before { content: "Email"; }
+        #user_table td:nth-of-type(4):before { content: "Mobile"; }
+        #user_table td:nth-of-type(5):before { content: "Address"; }
+        #user_table td:nth-of-type(6):before { content: "DOB"; }
+        #user_table td:nth-of-type(7):before { content: "Edit"; }
+        #user_table td:nth-of-type(8):before { content: "Delete"; }
+
+        /* Table header for partner modal table*/
+        #partner_modal td:nth-of-type(1):before { content: "Customer ID"; }
+        #partner_modal td:nth-of-type(2):before { content: "Transaction"; }
+        #partner_modal td:nth-of-type(3):before { content: "Amount (taka)"; }
+
+        /* Table header for profile modal table*/
+        #profile_modal td:nth-of-type(1):before { content: "Date"; }
+        #profile_modal td:nth-of-type(2):before { content: "Shop"; }
+        #profile_modal td:nth-of-type(3):before { content: "Total Bill"; }
+        #profile_modal td:nth-of-type(4):before { content: "Discount Availed"; }
+        #profile_modal td:nth-of-type(5):before { content: "Amount Spent"; }
+    }
+
+    
+    /* Smartphones (portrait and landscape) ----------- */
+    @media only screen
+    and (min-device-width : 320px)
+    and (max-device-width : 480px) {
+        body { 
+            padding: 0; 
+            margin: 0; 
+            width: 320px; }
+        }
+    
+    /* iPads (portrait and landscape) ----------- */
+    @media only screen and (min-device-width: 768px) and (max-device-width: 1024px) {
+        body { 
+            width: 495px; 
+        }
+    }
+    
+/*modal table style ends*/
+
+/*font style starts*/
+.nav_font ul li a{
+    font-family: Raleway;
+    font-size: .9em;
+    font-weight: 500;
+    color: #fff;
+
+}
+.sec-title h2{
+    font-family: Raleway;
+    font-size: 2em;
+}
+.overlay h2{
+    font-family: Raleway;
+    font-size: 2em;
+}
+.footer-single h6{
+    font-family: Raleway;
+    font-size: 1.2em;
+    font-weight: lighter;
+}
+.footer-single li a{
+    font-family: Raleway;
+    font-size: 1em;
+}
+.footer-single p{
+    font-family: Raleway;
+    font-size: 1.4em;
+}
+.copyright p{
+    font-family: Raleway;
+    font-size: 1.4em;
+}
+/*font style ends*/

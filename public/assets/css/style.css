@@ -1,0 +1,310 @@
+@media screen and (max-width: 768px) {
+  .user_image{
+    margin: 0 auto ;
+  }
+  .user_image img{
+    margin: 0 0 0 15% !important;
+  }
+}
+@media screen and (max-width: 768px) {
+  .user_image{
+    margin: 0 auto ;
+  }
+  .user_image img{
+    margin: 0 0 0 15% !important;
+  }
+}
+
+
+
+body{font-size: 1.4em;}
+table{width: 100%;}
+table tr th{
+	background-color: #b0c0ce;
+	padding: 2%;
+}
+table, th, td {
+    border: 1px solid black;
+    padding: 10px;
+}
+    /*--[if !IE]><!-->
+    Max width before this PARTICULAR table gets nasty
+    This query will take effect for any screen smaller than 760px
+    and also iPads specifically.
+    */
+    @media 
+    only screen and (max-width: 1024px),
+    (min-device-width: 768px) and (max-device-width: 1024px)  {
+    
+        /* Force table to not be like tables anymore */
+        #partner_table table, thead, tbody, th, td, tr { 
+            display: block; 
+        }
+        
+        /* Hide table headers (but not display: none;, for accessibility) */
+        #partner_table thead tr { 
+            position: absolute;
+            top: -9999px;
+            left: -9999px;
+        }
+        
+        #partner_table tr { border: 1px solid #ccc; }
+        
+        #partner_table td { 
+            /* Behave  like a "row" */
+            border: none;
+            border-bottom: 1px solid #eee; 
+            position: relative;
+            padding-left: 50%; 
+        }
+        
+        #partner_table td:before { 
+            /* Now like a table header */
+            position: absolute;
+            /* Top/left values mimic padding */
+            top: 6px;
+            left: 6px;
+            width: 45%; 
+            padding-right: 10px; 
+            white-space: nowrap;
+        }
+        
+        #user_table table, thead, tbody, th, td, tr { 
+            display: block; 
+        }
+        
+        /* Hide table headers (but not display: none;, for accessibility) */
+        #user_table thead tr { 
+            position: absolute;
+            top: -9999px;
+            left: -9999px;
+        }
+        
+        #user_table tr { border: 1px solid #ccc; }
+        
+        #user_table td { 
+            /* Behave  like a "row" */
+            border: none;
+            border-bottom: 1px solid #eee; 
+            position: relative;
+            padding-left: 50%; 
+        }
+        
+        #user_table td:before { 
+            /* Now like a table header */
+            position: absolute;
+            /* Top/left values mimic padding */
+            top: 6px;
+            left: 6px;
+            width: 45%; 
+            padding-right: 10px; 
+            white-space: nowrap;
+        }
+        /*style for partner modal table*/
+        #partner_modal table, thead, tfoot, tbody, th, td, tr { 
+            display: block; 
+        }
+        
+        /* Hide table headers (but not display: none;, for accessibility) */
+        #partner_modal thead tr { 
+            position: absolute;
+            top: -9999px;
+            left: -9999px;
+        }
+        
+        #partner_modal tr { border: 1px solid #ccc; }
+        
+        #partner_modal td { 
+            /* Behave  like a "row" */
+            border: none;
+            border-bottom: 1px solid #eee; 
+            position: relative;
+            padding-left: 50%; 
+        }
+        
+        #partner_modal td:before { 
+            /* Now like a table header */
+            position: absolute;
+            /* Top/left values mimic padding */
+            top: 6px;
+            left: 6px;
+            width: 45%; 
+            padding-right: 10px; 
+            white-space: nowrap;
+        }
+
+         /*style for profile modal table*/
+        #profile_modal table, thead, tbody, th, td, tr { 
+            display: block; 
+        }
+        
+        /* Hide table headers (but not display: none;, for accessibility) */
+        #profile_modal thead tr { 
+            position: absolute;
+            top: -9999px;
+            left: -9999px;
+        }
+        
+        #profile_modal tr { border: 1px solid #ccc; }
+        
+        #profile_modal td { 
+            /* Behave  like a "row" */
+            border: none;
+            border-bottom: 1px solid #eee; 
+            position: relative;
+            padding-left: 50%; 
+        }
+        
+        #profile_modal td:before { 
+            /* Now like a table header */
+            position: absolute;
+            /* Top/left values mimic padding */
+            top: 6px;
+            left: 6px;
+            width: 45%; 
+            padding-right: 10px; 
+            white-space: nowrap;
+        }
+        /*
+        Table header for partner table*/
+        #partner_table td:nth-of-type(1):before { content: "ID"; }
+        #partner_table td:nth-of-type(2):before { content: "Partner Name "; }
+        #partner_table td:nth-of-type(3):before { content: "Email"; }
+        #partner_table td:nth-of-type(4):before { content: "Mobile"; }
+        #partner_table td:nth-of-type(5):before { content: "Address"; }
+        #partner_table td:nth-of-type(6):before { content: "Transaction"; }
+        #partner_table td:nth-of-type(7):before { content: "Edit"; }
+        #partner_table td:nth-of-type(8):before { content: "Delete"; }
+
+        /* Table header for user table*/
+        #user_table td:nth-of-type(1):before { content: "ID"; }
+        #user_table td:nth-of-type(2):before { content: "Customer Name "; }
+        #user_table td:nth-of-type(3):before { content: "Email"; }
+        #user_table td:nth-of-type(4):before { content: "Mobile"; }
+        #user_table td:nth-of-type(5):before { content: "Address"; }
+        #user_table td:nth-of-type(6):before { content: "DOB"; }
+        #user_table td:nth-of-type(7):before { content: "Edit"; }
+        #user_table td:nth-of-type(8):before { content: "Delete"; }
+
+        /* Table header for partner modal table*/
+        #partner_modal td:nth-of-type(1):before { content: "Customer ID"; }
+        #partner_modal td:nth-of-type(2):before { content: "Transaction"; }
+        #partner_modal td:nth-of-type(3):before { content: "Amount (taka)"; }
+
+        /* Table header for profile modal table*/
+        #profile_modal td:nth-of-type(1):before { content: "Date"; }
+        #profile_modal td:nth-of-type(2):before { content: "Shop"; }
+        #profile_modal td:nth-of-type(3):before { content: "Total Bill"; }
+        #profile_modal td:nth-of-type(4):before { content: "Discount Availed"; }
+        #profile_modal td:nth-of-type(5):before { content: "Amount Spent"; }
+    }
+
+    
+    /* Smartphones (portrait and landscape) ----------- */
+    @media only screen
+    and (min-device-width : 320px)
+    and (max-device-width : 480px) {
+        body { 
+            padding: 0; 
+            margin: 0; 
+            width: 320px; }
+        }
+    
+    /* iPads (portrait and landscape) ----------- */
+    @media only screen and (min-device-width: 768px) and (max-device-width: 1024px) {
+        body { 
+            width: 495px; 
+        }
+    }
+    
+
+/* style for profile.php */
+.edit a{
+    list-style: none;
+    background-color: gray;
+    padding: 10px;
+    color: #fff;
+    border-radius: 2px;
+}
+
+.edit a:hover{
+    background-color: #000;
+    text-decoration: none;
+}
+
+#myNavbar ul li a{color: #000;}
+#transaction{margin: 5% 0;  text-align: center; }
+#transaction a{
+    color: #fff;
+    background-color:  #14213E;
+    border-radius: 5px;
+    padding: 10px;
+    font-size: 1.5em;
+    text-decoration: none;
+}
+
+.refer a{
+    font-size: 1.4em;
+    color: #fff;
+    background-color: red;
+    border-radius: 5px;
+    padding: 8px 15px;
+    text-decoration: none;
+    position: relative;
+}
+.refer a:hover{
+    background-color: #C9302C;
+}
+.foot{
+    color: #fff;
+    text-align: center;
+    padding: 10px 0;
+  background: red; /* For browsers that do not support gradients */
+  background: -webkit-linear-gradient(left, black , white); /* For Safari 5.1 to 6.0 */
+  background: -o-linear-gradient(right, red, yellow); /* For Opera 11.1 to 12.0 */
+  background: -moz-linear-gradient(right, red, yellow); /* For Firefox 3.6 to 15 */
+  background: linear-gradient(to right, black , white); /* Standard syntax */
+}
+
+.progress {
+    height: 20px;
+    margin-bottom: 20px;
+    overflow: hidden;
+    background-color: #f5f5f5;
+    border-radius: 4px;
+    -webkit-box-shadow: inset 0 1px 2px rgba(0, 0, 0, .1);
+    box-shadow: inset 0 1px 2px rgba(0, 0, 0, .1);
+    margin-top: 3%;
+}
+.progress-bar-success {
+    background-color: #ECC619;
+}
+
+
+/*style for restaurant cat page.html*/
+.center {
+    text-align: center;
+}
+
+.pagination {
+    display: inline-block;
+}
+
+.pagination a {
+    color: black;
+    float: left;
+    padding: 8px 16px;
+    text-decoration: none;
+    transition: background-color .3s;
+    border: 1px solid #ddd;
+    margin: 0 4px;
+    background-color: #CDB64B;
+}
+
+.pagination a.active {
+    background-color: #121E3B ;
+    color: white;
+    border: 1px solid #121E3B ;
+}
+
+.pagination a:hover:not(.active) {background-color: #B8860B;}

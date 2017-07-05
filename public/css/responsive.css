@@ -1,0 +1,120 @@
+/*============================================================
+	Responsive Homepage Start
+==============================================================*/
+@media (min-width: 1551px) and (max-width: 1920px) {
+.category-text{font-size: 20px;}
+
+}
+
+
+@media (min-width: 1366px) and (max-width: 1550px) {
+.category-text{font-size: 18px;}
+
+}
+
+@media (min-width: 768px) and (max-width: 1365px) {
+.category-text{font-size: 17px;}
+}
+
+@media (min-width: 480px) and (max-width: 767px) {
+
+.homepage-carousel{display: none;}
+.category-text{display: none;}
+.parallax-overlay{display: none;}
+}
+
+@media (min-width: 1px) and (max-width: 480px) {
+
+.homepage-carousel{display: none;}
+.category-text{display: none;}
+.parallax-overlay{display: none;}
+}
+
+/*============================================================
+	Responsive Homepage End
+==============================================================*/
+
+
+/*============================================================
+	Responsive AboutUs Start
+==============================================================*/
+
+@media (min-width: 1366px) and (max-width: 1550px) {
+
+
+}
+
+@media (min-width: 768px) and (max-width: 1365px) {
+.aboutus-slider{display: none;}
+
+}
+
+@media (min-width: 480px) and (max-width: 767px) {
+.aboutus-slider{display: none;}
+
+}
+
+@media and (max-width: 480px) {
+.aboutus-slider{display: none;}
+
+}
+
+/*============================================================
+	Responsive AboutUs End
+==============================================================*/
+
+/*============================================================
+	Responsive Homepage Start
+==============================================================*/
+
+@media (min-width: 1366px) and (max-width: 1550px) {
+
+
+}
+
+@media (min-width: 768px) and (max-width: 1365px) {
+
+
+}
+
+@media (min-width: 480px) and (max-width: 767px) {
+
+
+}
+
+@media and (max-width: 480px) {
+
+
+}
+
+/*============================================================
+	Responsive Homepage End
+==============================================================*/
+
+/*============================================================
+	Responsive Homepage Start
+==============================================================*/
+
+@media (min-width: 1366px) and (max-width: 1550px) {
+
+
+}
+
+@media (min-width: 768px) and (max-width: 1365px) {
+
+
+}
+
+@media (min-width: 480px) and (max-width: 767px) {
+
+
+}
+
+@media and (max-width: 480px) {
+
+
+}
+
+/*============================================================
+	Responsive Homepage End
+==============================================================*/
