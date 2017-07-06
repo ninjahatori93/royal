@@ -42,6 +42,10 @@ Route::get('faqs', function(){
 	return view('faqspage');
 });
 
+Route::get('restaurantprofile', function(){
+	return view('res-profile');
+});
+
 //admin panel
 Route::get('dashboard', function(){
 	return view('admin.index');
