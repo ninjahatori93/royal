@@ -43,7 +43,7 @@ Route::get('faqs', function(){
 });
 
 Route::get('restaurantProfile', function(){
-	return view('restaurantaccount');
+	return view('res-profile');
 });
 
 //admin panel

@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use View;
+use DB;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Input;
 
@@ -86,11 +87,14 @@ class searchController extends Controller
 
     //search function for home search bar
     public function searchWebsite(){
+        // $partnerInfo = partnerInfoModel::find();
+        // $partnerName = $partnerInfo->partner_name;
         $keyword = Input::get('search');
-        if(isset($keyword) && $keyword != ""){
-            return view('support');
-        }else{
-            return view('faqspage');
-        }
+
+        $partnerID = DB::table('partner_info')->where('partner_name', $keyword)->value('partner_account_id');
+
+        $partnerImages = DB::table('partner_images')->where('partner_account_id', $partnerID);
+        
+        return view('support', compact('partnerImages'));
     }
 }

@@ -1,4 +1,5 @@
 @include('header');
+{{$partnerImages->partner_gallery_image}}
 <style>
     label,h4{font-size: 1.1em; font-weight: bold;}
     .btn-primary {
