@@ -42,6 +42,10 @@ Route::get('faqs', function(){
 	return view('faqspage');
 });
 
+Route::get('restaurantProfile', function(){
+	return view('restaurantaccount');
+});
+
 //admin panel
 Route::get('dashboard', function(){
 	return view('admin.index');
@@ -62,3 +66,10 @@ Route::get('edit-partner', function(){
 Route::get('add-partner', function(){
 	return view('admin.add_partner');
 });
+
+//route for search bar
+Route::post('searchWebsite', 'searchController@searchWebsite');
+//route for login
+Route::post('login', 'loginController@loginCheck');
+//route for partner registration form
+Route::post('reg-form', 'loginController@loginCheck');
