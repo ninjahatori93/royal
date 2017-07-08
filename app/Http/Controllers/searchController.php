@@ -86,15 +86,19 @@ class searchController extends Controller
     }
 
     //search function for home search bar
-    public function searchWebsite(){
+     public function searchWebsite(){
         // $partnerInfo = partnerInfoModel::find();
         // $partnerName = $partnerInfo->partner_name;
         $keyword = Input::get('search');
 
         $partnerID = DB::table('partner_info')->where('partner_name', $keyword)->value('partner_account_id');
-
-        $partnerImages = DB::table('partner_images')->where('partner_account_id', $partnerID);
+        ////$partnerID = $partnerID->toArray();
+        //print_r($partnerID);
+        $partnerImages = DB::table('partner_images')->select('partner_gallery_image','partner_menu_image')->where('partner_account_id', $partnerID)->get();
+        $converted =json_decode(json_encode($partnerImages), true);
+        $converted = $converted[0];
+       // echo $converted['partner_gallery_image'];
         
-        return view('support', compact('partnerImages'));
+        return view('support', compact('converted'));
     }
 }
