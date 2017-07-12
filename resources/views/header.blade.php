@@ -4,6 +4,7 @@
 <!--[if IE 8]>         <html lang="en" class="no-js lt-ie9"> <![endif]-->
 <!--[if gt IE 8]><!--> <html lang="en" class="no-js"> <!--<![endif]-->
     <head>
+        <link rel="icon" href="images/Royalty Logo-02.png">
         <!-- Page Title -->
         <title>RoyaltyBd-Home</title>
         <meta charset="utf-8">

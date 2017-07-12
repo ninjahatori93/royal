@@ -1,5 +1,4 @@
 @include('header');
-{{ }}
 
 <style>
     label,h4{font-size: 1.1em; font-weight: bold;}

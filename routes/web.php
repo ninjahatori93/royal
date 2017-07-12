@@ -11,10 +11,13 @@
 |
 */
 
-Route::get('/', function () {
-    return view('index');
-});
-Route::get('offers', function(){
+// Route::get('/', function () {
+//     return view('index');
+// });
+Route::get('/', 'homeController@featuredDeals');
+Route::get('offers', 'homeController@allOffers');
+
+Route::get('after_filter', function(){
 	return view('offerspage');
 });
 Route::get('partners', function(){
@@ -42,9 +45,10 @@ Route::get('faqs', function(){
 	return view('faqspage');
 });
 
-Route::get('restaurantProfile', function(){
-	return view('res-profile');
-});
+// Route::get('restaurantProfile/{id?}', function($account_id = NULL){
+// 	return view('res-profile', compact('account_id'));
+// });
+Route::get('restaurantProfile/{id?}', ['uses' => 'homeController@profileFromOffer']);
 
 //admin panel
 Route::get('dashboard', function(){
@@ -68,8 +72,11 @@ Route::get('add-partner', function(){
 });
 
 //route for search bar
-Route::post('searchWebsite', 'searchController@searchWebsite');
+Route::post('searchWebsite', 'homeController@searchWebsite');
+Route::get('searchWebsite', 'homeController@searchWebsite');
 //route for login
-Route::post('login', 'loginController@loginCheck');
-//route for partner registration form
-Route::post('reg-form', 'loginController@loginCheck');
+Route::post('login', 'homeController@loginCheck');
+//route for subscription
+Route::post('subscribe', 'homeController@subscribe'); 
+//route for filter option in offer page
+Route::post('filter', 'homeController@filterOffers');

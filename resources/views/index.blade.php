@@ -1,8 +1,15 @@
 @include("header");
+<!-- Show flash message for search option -->
+<div class="flash-message">
+    @foreach (['danger', 'warning', 'success', 'info'] as $msg)
+      @if(Session::has('alert-' . $msg))
+      <p  style="margin-top: 5%;" class="alert alert-{{ $msg }}">{{ Session::get('alert-' . $msg) }} <a href="#" class="close" data-dismiss="alert" aria-label="close">&times;</a></p>
+      @endif
+    @endforeach
+  </div> 
+<!-- flash message ends here -->
 
-        <!--
-        Home Slider
-        ==================================== -->
+        <!-- ========================Home Slider ============================= -->
 		
 		<section id="slider" class="homepage-carousel">
 			<div id="carousel-example-generic" class="carousel slide" data-ride="carousel">
@@ -179,9 +186,17 @@
                  <!-- Carousel items -->
                     <div class="carousel fdi-Carousel slide" id="eventCarousel" data-interval="0">
                         <div class="carousel-inner onebyone-carosel">
-                            <div class="item active">
+                        	  	@foreach($profileImages as $profile)
+							  		<div class="item active">
+		                                <div class="col-md-4">
+		                                    <a href="#"><img src="{{ $profile['partner_profile_image'] }}" class="img-responsive center-block"></a>
+		                                    <div class="text-center">50% off</div>
+		                                </div>
+		                            </div>
+							  	@endforeach
+                            <!-- <div class="item active">
                                 <div class="col-md-4">
-                                    <a href="#"><img src="http://www.darunsoboffer.com/wp-content/uploads/2016/09/12799448_986169214786670_758680018724629611_n-1.png" class="img-responsive center-block"></a>
+                                    <a href="#"><img src="" class="img-responsive center-block"></a>
                                     <div class="text-center">50% off</div>
                                 </div>
                             </div>
@@ -209,12 +224,12 @@
                                     <div class="text-center">20% off</div>
                                 </div>
                             </div>
-                            <diFfeaturedv class="item">
+                            <div class="item">
                                 <div class="col-md-4">
                                     <a href="#"><img src="http://pakistani.pk/uploads/reviews/photos/original/15/fb/90/12193292-10156120345620705-4978748218704648899-n-25-1449524469.jpg" class="img-responsive center-block"></a>
                                     <div class="text-center">50% off</div>
                                 </div>
-                            </div>
+                            </div> -->
                         </div>
                         <a class="left carousel-control" href="#eventCarousel" data-slide="prev"></a>
                         <a class="right carousel-control" href="#eventCarousel" data-slide="next"></a>
@@ -254,8 +269,9 @@
 				<div class="footer-single" style="margin-top: 190px;margin-left: 70px">
 							<h2 style="color: #121E3B;margin-bottom: 15px"><b>Subscribe Now!</b></h2>
 							<h4 style="color: #121E3B;margin-bottom: 15px"><b>Subscribe now and be the first one to know about our latest offers.</b></h4>
-							<form action="#" class="subscribe">
+							<form action="{{ url('subscribe') }}" class="subscribe" method="post">
 								<input type="text" name="subscribe" id="subscribe" placeholder="Enter Email">
+								<input type="hidden" name="_token" value="{{ csrf_token() }}">
 								<input type="submit" value="&#8594;" id="subs">
 							</form>
 							

@@ -1,11 +1,11 @@
 @include('header');  
 
+
     <div class="container" id="hide_carousel">
     <div class="row" id="hide_carousel">
         <div class="span12"  id="hide_carousel" style="margin-top: 120px;">
             <div class="well" id="hide_carousel">
-                <div id="hide_carousel" class="carousel " style="padding-top: 30px; padding-bottom: 25px; background-color: 
-#121E3B">
+                <div id="hide_carousel" class="carousel " style="padding-top: 30px; padding-bottom: 25px; background-color: #121E3B">
                  	<!-- first count item -->
 						 <div id="myCarousel" class="carousel" style="height: 350px !important;">
                  <!-- Carousel items -->
@@ -121,10 +121,10 @@
                <div><input type="button" name="filter" id="show_filter" value="Filter"> </div>
                <div><input type="button" name="filter" id="hide_filter" value="Close"> </div>
                 
-<div class="col-xs-12 col-sm-12 col-md-2 col-lg-2" id="filter" style="background-color: #121E3B; padding-top: 80px;">
-                 <h3 style="font-size: 1.3em; color: white">Filter By</h3>
+               <div class="col-xs-12 col-sm-12 col-md-2 col-lg-2" id="filter" style="background-color: #121E3B; padding-top: 80px;">
+                 <h3 style="font-size: 1.3em; color: white">Filter Bye</h3>
 
-                  <form action="" method="post">
+                  <form action="{{ url('filter') }}" method="post">
                     <div class="checkbox">
                       <label style="font-size: 1em; color: white"><input type="checkbox" value="">Low to High</label>
                     </div>
@@ -135,30 +135,62 @@
                     <div style="font-size: 5px">
                     <select data-placeholder="Select" class="chosen-select" name="area" multiple tabindex="4" style="width:100%">
                       <option value=""></option>
-                        <option value="United States" style="font-size: .9em">300ft Road</option>
-                        <option value="Alban" style="font-size: .9em">Bailey Road</option>        
-                        <option value="Aland Islands" style="font-size: .9em">Banani</option>
-                        <option value="Albania" style="font-size: .9em">Baridhara</option>
-                        <option value="Albania" style="font-size: .9em">B/R/A</option>
-                        <option value="Albania" style="font-size: .9em">Dhanmondi</option>
-                        <option value="United Kingdom" style="font-size: .9em">Gulshan 1</option>
-                        <option value="Afghanistan" style="font-size: .9em">Gulshan 2</option>
-                        <option value="Albania" style="font-size: .9em">Khilgaon</option>
-                        <option value="Albania" style="font-size: .9em">Mirpur</option>
-                        <option value="Albania" style="font-size: .9em">Mohakhali</option>        
-                        <option value="Albania" style="font-size: .9em">Mdpur</option>
-                        <option value="Albania" style="font-size: .9em">Panthopath</option>
-                        <option value="Albania" style="font-size: .9em">Shyamoli</option>
-                        <option value="Albania" style="font-size: .9em">Uttara</option>
+                        <option value="300ft Road" style="font-size: .9em">300ft Road</option>
+                        <option value="Bailey Road" style="font-size: .9em">Bailey Road</option>        
+                        <option value="Banani" style="font-size: .9em">Banani</option>
+                        <option value="Baridhara" style="font-size: .9em">Baridhara</option>
+                        <option value="B/R/A" style="font-size: .9em">B/R/A</option>
+                        <option value="Dhanmondi" style="font-size: .9em">Dhanmondi</option>
+                        <option value="Gulshan 1" style="font-size: .9em">Gulshan 1</option>
+                        <option value="Gulshan 2" style="font-size: .9em">Gulshan 2</option>
+                        <option value="Khilgaon" style="font-size: .9em">Khilgaon</option>
+                        <option value="Mirpur" style="font-size: .9em">Mirpur</option>
+                        <option value="Mohakhali" style="font-size: .9em">Mohakhali</option>        
+                        <option value="Mdpur" style="font-size: .9em">Mdpur</option>
+                        <option value="Panthopath" style="font-size: .9em">Panthopath</option>
+                        <option value="Shyamoli" style="font-size: .9em">Shyamoli</option>
+                        <option value="Uttara" style="font-size: .9em">Uttara</option>
                     </select>
                     </div><br><br>
-
+                    <input type="hidden" name="_token" value="{{ csrf_token() }}">
                     <input type="submit" name="submit" value="Search" >
                   </form>
-                </div>
+               </div>
                 <!-- <div class="col-md-1 col-lg-3"></div> -->
                 <div>
+
+
+                @if (!empty($profileImages))
+                @foreach($profileImages as $exclusiveOffers)
+                    <article class="col-xs-12 col-sm-12 col-md-4 col-lg-4" id="categories">
+                        <div class="banner">
+                            <a href="{{ url('restaurantProfile/'. $exclusiveOffers['partner_account_id'] )}}">
+                                <img src="{{ $exclusiveOffers['partner_profile_image'] }}" alt="Avatar" class="image" style="width:100%; height: 100%;">
+                                <div class="middle">
+                                 <div class="text"><h3>View Offer</h3></div>
+                                </div>
+                            </a> 
+                        </div>                            
+                        <button type="button" class="btn btn-primary btn-block">Restaurant A</button>
+                    </article>
+                @endforeach
+                @else
                 <article class="col-xs-12 col-sm-12 col-md-4 col-lg-4" id="categories">
+                        <div class="banner">
+                            <a href="{{ url('restaurantProfile/'. $partner_images['partner_account_id'] )}}">
+                                <img src="{{ $partner_images['partner_profile_image'] }}" alt="Avatar" class="image" style="width:100%; height: 100%;">
+                                <div class="middle">
+                                 <div class="text"><h3>View Offer</h3></div>
+                                </div>
+                            </a> 
+                        </div>                            
+                        <button type="button" class="btn btn-primary btn-block">Restaurant A</button>
+                    </article>
+                @endif
+
+
+
+                {{-- <article class="col-xs-12 col-sm-12 col-md-4 col-lg-4" id="categories">
                     <div class="banner">
                         <a href="#">
                             <img src="images/food.jpg" alt="Avatar" class="image" style="width:100%">
@@ -313,7 +345,7 @@
                         
                     </div>                            
                     <button type="button" class="btn btn-primary btn-block">Restaurant L</button>
-                </article>
+                </article> --}}
 
                 </div>                  
                 </div>

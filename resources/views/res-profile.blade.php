@@ -1,5 +1,10 @@
 @include('header');
- 	
+<?php 
+// $partnerInfo = array();
+//       $partnerInfo['location'] = $partnerInfoFromOffer['location'];
+//       $partnerInfo['partner_gallery_image'] = $partnerInfoFromOffer['partner_gallery_image']; 
+//       $partnerInfo['partner_menu_image'] = $partnerInfoFromOffer['partner_menu_image'];    
+?>
 <center>
 <section id="works" class="works clearfix" style="width: 80%;margin-top: 100px;margin-bottom:50px;background-color: #e3e5e8">
 
@@ -7,14 +12,14 @@
 
 	<div style="width: 66%;height: 500px;float: left">
 		<div class="image-viewer"  style="border-radius: 8px">
-      <a class="example-image-link" href="images/menu/menu1.jpg" data-lightbox="example-set"><img class="example-image" src="images/menu/gallery.jpg" alt="" style="width:100%;height: 500px;"/></a>
+      <a class="example-image-link" href="images/menu/menu1.jpg" data-lightbox="example-set"><img class="example-image" src="{{ $partnerInfo['partner_gallery_image'] }}" alt="" style="width:100%;height: 500px;"/></a>
       <a class="example-image-link" href="images/menu/menu2.jpg" data-lightbox="example-set"></a>
       <a class="example-image-link" href="images/menu/menu3.jpg" data-lightbox="example-set"></a>
     </div>
 	</div>
 
 	<div style="border-radius: 8px;height: 500px;width: 33%;float: left;">
-		<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3650.098707666888!2d90.4233518155254!3d23.81508878455752!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0xd660a4f50365294a!2sNorth+South+University+(NSU)!5e0!3m2!1sen!2s!4v1490635508848" width="100%" height="100%" frameborder="0" style="border:0; border-radius: 8px" allowfullscreen></iframe>
+		<iframe src="{{ $partnerInfo['location'] }}" width="100%" height="100%" frameborder="0" style="border:0; border-radius: 8px" allowfullscreen></iframe>
 	</div>	
 
 	<div style="text-align: center;width: 66%;float: left;height: 300px">
@@ -82,7 +87,7 @@
 	
 	<div style="text-align: center;width: 33%;float: left;">
 		<div class="image-viewer">
-      <a class="example-image-link" href="images/menu/menu1.jpg" data-lightbox="example-set"><img class="example-image" src="images/menu/menu.png" alt=""/></a>
+      <a class="example-image-link" href="images/menu/menu1.jpg" data-lightbox="example-set"><img class="example-image" src="{{ $partnerInfo['partner_menu_image'] }}" width="95%" height="100%" alt=""/></a>
       <a class="example-image-link" href="images/menu/menu2.jpg" data-lightbox="example-set"></a>
       <a class="example-image-link" href="images/menu/menu3.jpg" data-lightbox="example-set"></a>
     </div>
@@ -100,14 +105,14 @@
 
     <div style="width: 66%;height: 500px;float: left">
         <div class="image-viewer"  style="border-radius: 8px">
-      <a class="example-image-link" href="images/menu/menu1.jpg" data-lightbox="example-set"><img class="example-image" src="images/menu/gallery.jpg" alt="" style="width:100%;height: 500px;"/></a>
+      <a class="example-image-link" href="images/menu/menu1.jpg" data-lightbox="example-set"><img class="example-image" src="{{ $partnerInfo['partner_gallery_image'] }}" alt="" style="width:100%;height: 500px;"/></a>
       <a class="example-image-link" href="images/menu/menu2.jpg" data-lightbox="example-set"></a>
       <a class="example-image-link" href="images/menu/menu3.jpg" data-lightbox="example-set"></a>
     </div>
     </div>
 
     <div style="border-radius: 8px;height: 250px;width: 33%;float: left;">
-        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3650.098707666888!2d90.4233518155254!3d23.81508878455752!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0xd660a4f50365294a!2sNorth+South+University+(NSU)!5e0!3m2!1sen!2s!4v1490635508848" width="100%" height="100%" frameborder="0" style="border:0; border-radius: 8px" allowfullscreen></iframe>
+        <iframe src="{{ $partnerInfo['location' ]}}" width="100%" height="100%" frameborder="0" style="border:0; border-radius: 8px" allowfullscreen></iframe>
     </div>  
 
 
@@ -116,14 +121,13 @@
     
     <div style="text-align: center;width: 33%;float: left;height: 250px">
         <div class="image-viewer">
-      <a class="example-image-link" href="images/menu/menu1.jpg" data-lightbox="example-set"><img class="example-image" src="images/menu/menu.png" alt=""/></a>
+      <a class="example-image-link" href="images/menu/menu1.jpg" data-lightbox="example-set"><img class="example-image" src="{{$partnerInfo['partner_menu_image']}}" width="95%" height="96%" alt=""/></a>
       <a class="example-image-link" href="images/menu/menu2.jpg" data-lightbox="example-set"></a>
       <a class="example-image-link" href="images/menu/menu3.jpg" data-lightbox="example-set"></a>
     </div>
   </div>  
 
 </div>
-
 
 </section>
 
@@ -141,36 +145,36 @@
 
         <!-- Swiper Clients -->
         <div class="row">
-                    <div class="col-md-3">
-                        <div class="swiper-slide">
-                            <li class="list__primary__item"><span class="glyphicon glyphicon-ok"></span> Wi-Fi available</li>
-                        </div>
-                        <div class="swiper-slide">
-                            <li class="list__primary__item"><span class="glyphicon glyphicon-ok"></span> Kids Play Area</li>
-                        </div>
-                    </div>
-                    <div class="col-md-3">
-                        <div class="swiper-slide">
-                            <li class="list__primary__item"><span class="glyphicon glyphicon-ok"></span> Air Conditioned</li>
-                        </div>
-                        <div class="swiper-slide">
-                            <li class="list__primary__item"><span class="glyphicon glyphicon-ok"></span> Outdoor Sitting Area</li>
-                        </div>
-                    </div>
-                    <div class="col-md-3">
-                        <div class="swiper-slide">
-                            <li class="list__primary__item"><span class="glyphicon glyphicon-ok"></span> Takes Reservation</li>
-                        </div>
-                        <div class="swiper-slide">
-                            <li class="list__primary__item"><span class="glyphicon glyphicon-ok"></span> Accepts Card Payments</li>
-                        </div>
-                    </div>
-                    <div class="col-md-3">
-                        <div class="swiper-slide">
-                            <li class="list__primary__item"><span class="glyphicon glyphicon-ok"></span> Smoking Area</li>
-                        </div>
-                    </div>
+            <div class="col-md-3">
+                <div class="swiper-slide">
+                    <li class="list__primary__item"><span class="glyphicon glyphicon-ok"></span> Wi-Fi available</li>
                 </div>
+                <div class="swiper-slide">
+                    <li class="list__primary__item"><span class="glyphicon glyphicon-ok"></span> Kids Play Area</li>
+                </div>
+            </div>
+            <div class="col-md-3">
+                <div class="swiper-slide">
+                    <li class="list__primary__item"><span class="glyphicon glyphicon-ok"></span> Air Conditioned</li>
+                </div>
+                <div class="swiper-slide">
+                    <li class="list__primary__item"><span class="glyphicon glyphicon-ok"></span> Outdoor Sitting Area</li>
+                </div>
+            </div>
+            <div class="col-md-3">
+                <div class="swiper-slide">
+                    <li class="list__primary__item"><span class="glyphicon glyphicon-ok"></span> Takes Reservation</li>
+                </div>
+                <div class="swiper-slide">
+                    <li class="list__primary__item"><span class="glyphicon glyphicon-ok"></span> Accepts Card Payments</li>
+                </div>
+            </div>
+            <div class="col-md-3">
+                <div class="swiper-slide">
+                    <li class="list__primary__item"><span class="glyphicon glyphicon-ok"></span> Smoking Area</li>
+                </div>
+            </div>
+        </div>
         <!-- End Swiper Clients -->
     </div>
 </section> <!-- #cd-placeholder-5 -->
